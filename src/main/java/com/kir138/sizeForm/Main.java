@@ -6,5 +6,8 @@ public class Main {
         Circle circle = new Circle(5.1);
         double a = circle.getPerimeter();
         System.out.println(a);
+
+        double b = circle.getArea();
+        System.out.println(b);
     }
 }
