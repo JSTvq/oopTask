@@ -10,20 +10,13 @@ public class Flower {
      */
 
     protected int price;
-    private static int soldCount;
-    protected int quantity;
-    protected String colour;
+    private static int quantity = 0;
 
     public Flower() {
     }
 
     public Flower(int price) {
         this.price = price;
-    }
-
-    public Flower(int quantity, String colour) {
-        this.quantity = quantity;
-        this.colour = colour;
     }
 
     public int getPrice() {
@@ -34,8 +27,11 @@ public class Flower {
         this.price = price;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public static void qt() {
+        quantity++;
     }
 
+    public static int getQt() {
+        return quantity;
+    }
 }

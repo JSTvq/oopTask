@@ -2,44 +2,38 @@ package com.kir138.flower;
 
 public class Main {
     public static void main(String[] args) {
-        Tulip tulip = new Tulip(100); //105
-        Rose rose = new Rose(110); //120
-        Carnation carnation = new Carnation(120); //135
-
-        /*System.out.println(tulip.getPrice() * 3);
-        System.out.println(rose.getPrice() * 3);
-        System.out.println(carnation.getPrice() * 5);
-        int price1 = (tulip.getPrice() * 3) + (rose.getPrice() * 3) + (carnation.getPrice() * 5);
-        System.out.println("Букет должен стоить " + price1); //1350*/
 
         //делаем букет
-        Flower[] bouquet = new Flower[3];
-        bouquet[0] = new Tulip(3, "желтый");
-        bouquet[1] = new Rose(3, "красный");
-        bouquet[2] = new Carnation(5, "белый");
-        int quantity = totalFlowers(bouquet);
-        int price = totalPrice(bouquet);
+        Tulip tulip1 = new Tulip(100);
+        Tulip tulip2 = new Tulip(100);
+        Tulip tulip3 = new Tulip(100);
+        Rose rose1 = new Rose(110);
+        Rose rose2 = new Rose(110);
+        Rose rose3 = new Rose(110);
+        Carnation carnation1 = new Carnation(120);
+        Carnation carnation2 = new Carnation(120);
+        Carnation carnation3 = new Carnation(120);
 
-        System.out.println("в букете " + quantity + " цветов");
-        System.out.println("букет стоит " + price);
-    }
-
-    //количество цветов
-    public static int totalFlowers(Flower[] bouquet) {
-        int totalFlowers = 0;
-        for (Flower flower : bouquet) {
-            totalFlowers += flower.getQuantity();
-        }
-        return totalFlowers;
+        Flower[] bouquet1 = {tulip1, rose1, rose2, carnation1, carnation2};
+        Flower[] bouquet2 = {carnation1, carnation2, carnation3, tulip1, tulip2, tulip3};
+        Flower[] bouquet3 = {tulip3, rose3, carnation3, carnation2};
+        int price1 = totalFlowers(bouquet1);
+        int price2 = totalFlowers(bouquet2);
+        int price3 = totalFlowers(bouquet3);
+        int amount = Flower.getQt();
+        System.out.println("цена букета 1 = " + price1);
+        System.out.println("цена букета 2 = " + price2);
+        System.out.println("цена букета 3 = " + price3);
+        System.out.println("количество проданных цветов = " + amount);
     }
 
     //цена букета
-    public static int totalPrice(Flower[] bouquet) {
-        int totalPrice = 0;
+    public static int totalFlowers(Flower[] bouquet) {
+        int totalFlowers = 0;
         for (Flower flower : bouquet) {
-            totalPrice += flower.getQuantity() * flower.getPrice();
+            Flower.qt();
+            totalFlowers += flower.getPrice();
         }
-        return totalPrice;
+        return totalFlowers;
     }
-
 }

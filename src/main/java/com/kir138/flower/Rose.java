@@ -7,10 +7,6 @@ public class Rose extends Flower {
         super(price);
     }
 
-    public Rose(int quantity, String colour) {
-        super(quantity, colour);
-    }
-
     @Override
     public int getPrice() {
         return price + 10;

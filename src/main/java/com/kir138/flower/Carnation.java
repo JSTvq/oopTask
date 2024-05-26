@@ -7,10 +7,6 @@ public class Carnation extends Flower {
         super(price);
     }
 
-    public Carnation(int quantity, String colour) {
-        super(quantity, colour);
-    }
-
     @Override
     public int getPrice() {
         return price + 15;

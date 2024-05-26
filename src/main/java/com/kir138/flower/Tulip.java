@@ -7,10 +7,6 @@ public class Tulip extends Flower {
         super(price);
     }
 
-    public Tulip(int quantity, String colour) {
-        super(quantity, colour);
-    }
-
     @Override
     public int getPrice() {
         return price + 5;
